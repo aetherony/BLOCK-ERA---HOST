@@ -1,45 +1,950 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#070b16">
-<title>BLOCKERA HOST — Hospedagem de Servidores</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="BLOCKERA HOST - Hospedagem de servidores Minecraft com desempenho, estabilidade e qualidade.">
+<title>BLOCKERA HOST | Hospedagem Premium</title>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@600;700;800&display=swap');
-:root{--bg:#070b16;--panel:#0b1222;--panel2:#0e1830;--line:#1b2b4b;--text:#eef4ff;--muted:#95a8c8;--blue:#08a9ff;--cyan:#00e1ff;--purple:#5367ff;--sidebar:244px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 70% 0%,#0d1c3c 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer}.sidebar{position:fixed;z-index:20;inset:0 auto 0 0;width:var(--sidebar);padding:25px 18px 20px;background:rgba(5,9,18,.94);border-right:1px solid #1a2b4a;display:flex;flex-direction:column;backdrop-filter:blur(20px)}.brand{display:flex;align-items:center;gap:12px;padding:4px 9px 24px}.brand-mark{width:44px;height:44px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(140deg,#00b5ff,#2046d8);font:900 27px Orbitron;color:#fff;box-shadow:0 0 26px #007dff50}.brand-text{font-family:Orbitron;letter-spacing:1.2px;font-weight:800;font-size:16px}.brand-text small{display:block;font:600 10px Inter;letter-spacing:4px;color:#8fb4e9;margin-top:3px}.nav{display:grid;gap:7px}.nav a{display:flex;align-items:center;gap:13px;padding:12px 13px;border:1px solid transparent;border-radius:13px;color:#aebed9;font-size:13px;font-weight:600;transition:.2s}.nav a:hover,.nav a.active{color:white;border-color:#173a83;background:linear-gradient(100deg,#0d3a83a0,#10225c80);box-shadow:inset 0 0 20px #0d46a322}.nav a.active{background:linear-gradient(100deg,#0d54c8,#122b80)}.nav .ico{width:20px;text-align:center;font-size:16px}.side-promo{margin-top:auto;border:1px solid #213b65;background:linear-gradient(150deg,#101b34,#0b1222);padding:15px;border-radius:16px}.side-promo strong{display:block;font-size:13px;margin-bottom:6px}.side-promo p{font-size:11px;line-height:1.55;color:var(--muted);margin:0 0 12px}.btn{border:1px solid #29446c;border-radius:11px;padding:11px 15px;background:#101a2c;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.2s}.btn:hover{transform:translateY(-2px);border-color:#2ca9ff}.btn.primary{border:0;background:linear-gradient(110deg,#00b8f5,#2259ff);box-shadow:0 8px 25px #007aff35;color:white}.side-promo .btn{width:100%;padding:10px}.socials{display:flex;gap:9px;margin:17px 0 12px}.socials a{width:35px;height:35px;border:1px solid #233c65;border-radius:50%;display:grid;place-items:center;font-size:12px;color:#b9d1f5}.side-foot{text-align:center;color:#60728f;font-size:9px;line-height:1.6}.main{margin-left:var(--sidebar);min-height:100vh;padding:25px clamp(22px,4vw,58px) 50px;max-width:1700px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:30px}.status-pill{border:1px solid #20365b;background:#0b1427;border-radius:30px;padding:9px 13px;font-size:11px;color:#d7e5fa;display:flex;align-items:center;gap:8px}.green-dot{width:8px;height:8px;background:#20e6a2;border-radius:50%;box-shadow:0 0 10px #20e6a2}.top-actions{display:flex;gap:9px}.mobile-menu{display:none}.hero{position:relative;overflow:hidden;border:1px solid #172b4d;border-radius:24px;min-height:365px;background:linear-gradient(110deg,#081226 0%,#0b1a39 58%,#091127 100%);padding:clamp(24px,4vw,48px);display:flex;align-items:center}.hero:after{content:'';position:absolute;width:440px;height:440px;right:-100px;top:-80px;background:radial-gradient(circle,#1258d63a,transparent 68%);pointer-events:none}.hero-copy{position:relative;z-index:2;max-width:650px}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #254a82;background:#0b1930;padding:8px 11px;border-radius:30px;font-size:10px;color:#b7d5ff;margin-bottom:17px}.eyebrow b{color:#28baff}.hero h1{font:800 clamp(36px,5vw,68px)/1.03 Orbitron,Inter;margin:0;letter-spacing:-2px}.hero h1 span{background:linear-gradient(90deg,#f2f7ff,#50c8ff 48%,#5378ff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero h2{font-size:clamp(18px,2vw,26px);margin:18px 0 9px;font-weight:700}.hero h2 span{color:#27b9ff}.hero p{color:#a8bbd8;max-width:500px;line-height:1.7;font-size:13px}.hero-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.hero-art{position:absolute;right:3%;top:0;bottom:0;width:43%;display:flex;align-items:center;justify-content:center;opacity:.65;pointer-events:none}.orb{width:min(34vw,360px);aspect-ratio:1;border-radius:50%;border:1px solid #168dff5a;background:radial-gradient(circle at 30% 30%,#245ec544,transparent 45%),radial-gradient(circle at 50% 50%,#0a2451,#070d1b 68%);box-shadow:0 0 90px #075aff25,inset 0 0 70px #168aff16;position:relative}.orb:before,.orb:after{content:'';position:absolute;inset:15%;border:1px solid #148dff45;border-radius:50%;transform:rotate(-25deg) scaleX(1.5)}.orb:after{inset:26%;transform:rotate(40deg) scaleX(1.4);border-color:#00d9ff30}.cube{position:absolute;width:90px;height:90px;transform:rotate(35deg);background:linear-gradient(145deg,#1268c9,#102b70 60%,#07142c);border:1px solid #1d92ff;box-shadow:0 0 50px #1288ff55;display:grid;place-items:center;font:800 37px Orbitron;color:#75d6ff;text-shadow:0 0 20px #00baff}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:19px 0 36px;border:1px solid #20395f;background:#0a1221d9;border-radius:17px;overflow:hidden}.stat{display:flex;align-items:center;gap:13px;padding:19px 17px;border-right:1px solid #1d2d49}.stat:last-child{border:0}.stat-icon{font-size:22px;color:#13baff}.stat strong{display:block;font-size:17px}.stat small{display:block;color:#91a5c5;font-size:10px;margin-top:4px}.section{margin-top:32px;scroll-margin-top:24px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:17px}.section-head h2{font-size:21px;margin:0}.section-head p{font-size:12px;color:var(--muted);margin:6px 0 0}.section-kicker{color:#20b7ff;font-size:11px;font-weight:700;margin-bottom:7px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.feature-card,.plan-card,.info-card{border:1px solid #20375c;border-radius:16px;background:linear-gradient(155deg,#0e192b,#09111f);padding:18px;transition:.22s}.feature-card:hover,.plan-card:hover{transform:translateY(-3px);border-color:#238aff;box-shadow:0 10px 35px #006dff13}.card-icon{width:43px;height:43px;border-radius:12px;display:grid;place-items:center;background:#0c2b51;border:1px solid #1c5b9c;font-size:20px;margin-bottom:14px}.feature-card h3{font-size:13px;margin:0 0 7px}.feature-card p{font-size:11px;color:#96a9c7;line-height:1.6;margin:0}.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.plan-card h3{font-size:15px;margin:0 0 6px}.plan-card p{font-size:11px;color:var(--muted);margin:0 0 14px}.price{font:700 25px Orbitron;margin:14px 0}.price small{font:500 11px Inter;color:var(--muted)}.plan-card ul{list-style:none;padding:0;margin:14px 0 18px;display:grid;gap:8px;color:#b2c2dc;font-size:11px}.plan-card li:before{content:'✓';color:#29b8ff;margin-right:8px}.plan-card .btn{width:100%}.featured{border-color:#267dcb;background:linear-gradient(155deg,#10254b,#0a1425);position:relative}.featured-tag{font-size:9px;color:#79d4ff;border:1px solid #2676b8;border-radius:30px;padding:5px 8px;float:right}.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:14px}.info-card h3{margin:0 0 9px;font-size:14px}.info-card p{font-size:12px;color:#9eb1cf;line-height:1.7;margin:0}.footer{border-top:1px solid #182943;margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;color:#7285a3;font-size:10px}.toast{position:fixed;bottom:24px;right:24px;background:#11233d;border:1px solid #2c68a5;padding:13px 17px;border-radius:12px;font-size:12px;box-shadow:0 10px 35px #0007;display:none;z-index:50}.toast.show{display:block;animation:rise .25s ease}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-@media(max-width:1120px){.cards{grid-template-columns:repeat(2,1fr)}.hero-art{opacity:.35}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid #1d2d49}}
-@media(max-width:760px){:root{--sidebar:0px}.sidebar{width:265px;transform:translateX(-110%);transition:transform .25s ease;box-shadow:20px 0 60px #0008}.sidebar.open{transform:translateX(0)}.main{margin:0;padding:17px 15px 35px}.topbar{margin-bottom:18px}.mobile-menu{display:inline-grid;place-items:center;border:1px solid #233a61;background:#101a2b;border-radius:10px;width:40px;height:40px;font-size:18px}.status-pill{font-size:9px;padding:8px 10px}.top-actions .btn{padding:9px 11px;font-size:10px}.hero{min-height:330px;padding:23px 19px}.hero-art{right:-22%;width:70%;opacity:.23}.hero h1{font-size:38px;letter-spacing:-1px}.hero p{font-size:12px}.stats{margin:13px 0 27px}.stat{padding:14px 10px;gap:8px}.stat strong{font-size:14px}.stat small{font-size:9px}.stat-icon{font-size:18px}.plans{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.section-head h2{font-size:18px}.footer{gap:12px;flex-direction:column}.sidebar .brand{padding-bottom:19px}}
-@media(max-width:400px){.hero h1{font-size:33px}.cards{grid-template-columns:1fr}.top-actions .btn:first-child{display:none}.stat{padding:12px 8px}.stat strong{font-size:13px}}
+:root {
+    --bg: #090909;
+    --surface: #111111;
+    --surface2: #171717;
+    --orange: #ff7900;
+    --orange2: #ff9b38;
+    --text: #ffffff;
+    --muted: #999999;
+    --border: rgba(255,255,255,.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #0d0d0d;
+    border-right: 1px solid var(--border);
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #ff9b38, #f45b00);
+    color: #111;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+    font-size: 23px;
+}
+
+.logo-name {
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.logo-name span {
+    color: var(--orange);
+}
+
+.menu-label {
+    font-size: 10px;
+    color: #666;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin: 10px 0 15px 10px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 14px;
+    color: #999;
+    font-size: 14px;
+    border-radius: 9px;
+    transition: .25s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: rgba(255,121,0,.12);
+    color: var(--orange2);
+}
+
+.menu a.active {
+    border-left: 3px solid var(--orange);
+}
+
+.menu-icon {
+    width: 20px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.sidebar-card {
+    background: linear-gradient(145deg, #21150c, #14110e);
+    border: 1px solid rgba(255,121,0,.2);
+    padding: 17px;
+    border-radius: 12px;
+}
+
+.sidebar-card p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 9px 0 14px;
+}
+
+.sidebar-card a {
+    color: var(--orange2);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* MAIN */
+
+.main {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+.topbar {
+    height: 75px;
+    padding: 0 5%;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(9,9,9,.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+.breadcrumb {
+    color: #888;
+    font-size: 13px;
+}
+
+.breadcrumb span {
+    color: var(--orange);
+}
+
+.top-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn {
+    padding: 11px 19px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: .25s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--orange);
+    color: #111;
+}
+
+.btn-primary:hover {
+    background: var(--orange2);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: #333;
+    color: white;
+}
+
+.btn-outline:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.mobile-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    padding: 95px 7% 85px;
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at 85% 40%, rgba(255,121,0,.12), transparent 45%),
+      linear-gradient(120deg, #0b0b0b, #111 70%, #17100b);
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255,121,0,.3);
+    background: rgba(255,121,0,.08);
+    padding: 9px 14px;
+    border-radius: 30px;
+    color: var(--orange2);
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+}
+
+.tag-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--orange);
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.08;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 22px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero-description {
+    max-width: 520px;
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 270px;
+    height: 270px;
+    border: 1px solid rgba(255,121,0,.2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 100px rgba(255,121,0,.07);
+}
+
+.hero-decoration::before,
+.hero-decoration::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(255,121,0,.15);
+    border-radius: 50%;
+}
+
+.hero-decoration::before {
+    inset: 25px;
+}
+
+.hero-decoration::after {
+    inset: 55px;
+}
+
+.hero-symbol {
+    font-size: 100px;
+    font-weight: 900;
+    color: var(--orange);
+    text-shadow: 0 0 40px rgba(255,121,0,.5);
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    margin-bottom: 32px;
+}
+
+.section-heading small {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 12px;
+    line-height: 1.7;
+}
+
+.server-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.server-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 27px;
+    transition: .3s;
+}
+
+.server-card:hover {
+    border-color: rgba(255,121,0,.5);
+    transform: translateY(-5px);
+}
+
+.server-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255,121,0,.12);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.server-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.server-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: var(--orange2);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* FEATURES */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.feature {
+    padding: 24px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+}
+
+.feature-icon {
+    font-size: 25px;
+    margin-bottom: 17px;
+}
+
+.feature h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* HOW IT WORKS */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    padding: 23px;
+    border-left: 2px solid var(--orange);
+    background: var(--surface);
+    border-radius: 0 10px 10px 0;
+}
+
+.step-number {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.step h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* CTA */
+
+.cta {
+    margin: 20px 7% 75px;
+    padding: 45px 35px;
+    background: linear-gradient(120deg, #211309, #15100d);
+    border: 1px solid rgba(255,121,0,.25);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.cta h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+footer span {
+    color: var(--orange);
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    animation: reveal .8s ease both;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width: 1000px) {
+    .hero-decoration {
+        opacity: .3;
+        right: -70px;
+    }
+
+    .features,
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 760px) {
+    .sidebar {
+        transform: translateX(-100%);
+        transition: .3s;
+        width: 270px;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .topbar {
+        height: 65px;
+        padding: 0 20px;
+    }
+
+    .breadcrumb {
+        display: none;
+    }
+
+    .hero {
+        padding: 75px 25px;
+        min-height: 460px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-decoration {
+        right: -150px;
+        opacity: .15;
+    }
+
+    .section {
+        padding: 55px 23px;
+    }
+
+    .server-grid,
+    .features,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin: 10px 20px 50px;
+        padding: 30px 23px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer {
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-actions .btn-outline {
+        display: none;
+    }
+}
+
+@media(max-width: 380px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
 </style>
 </head>
+
 <body>
+
+<!-- MENU LATERAL -->
+
 <aside class="sidebar" id="sidebar">
-  <a class="brand" href="#inicio"><span class="brand-mark">B</span><span class="brand-text">BLOCKERA<small>HOST</small></span></a>
-  <nav class="nav">
-    <a href="#inicio" class="active"><span class="ico">⌂</span> Início</a>
-    <a href="#servidores"><span class="ico">▤</span> Servidores</a>
-    <a href="#planos"><span class="ico">♛</span> Planos</a>
-    <a href="#sobre"><span class="ico">ⓘ</span> Sobre</a>
-    <a href="#suporte"><span class="ico">☏</span> Suporte</a>
-    <a href="#painel"><span class="ico">▦</span> Painel</a>
-  </nav>
-  <div class="side-promo"><strong>Comece sua jornada!</strong><p>Crie sua conta e gerencie sua experiência de hospedagem em um só lugar.</p><a class="btn primary" href="#conta">Criar conta ↗</a></div>
-  <div class="socials"><a href="#" aria-label="Discord">◉</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="Instagram">◎</a></div>
-  <div class="side-foot">BLOCKERA HOST<br>© 2026. Todos os direitos reservados.</div>
+
+    <a href="index.html" class="logo">
+        <div class="logo-icon">B</div>
+        <div class="logo-name">BLOCKERA <span>HOST</span></div>
+    </a>
+
+    <div class="menu-label">MENU PRINCIPAL</div>
+
+    <nav class="menu">
+        <a href="index.html" class="active">
+            <span class="menu-icon">⌂</span> Início
+        </a>
+
+        <a href="servidores.html">
+            <span class="menu-icon">▣</span> Servidores
+        </a>
+
+        <a href="planos.html">
+            <span class="menu-icon">◇</span> Planos
+        </a>
+
+        <a href="sobre.html">
+            <span class="menu-icon">ⓘ</span> Sobre nós
+        </a>
+
+        <a href="suporte.html">
+            <span class="menu-icon">☏</span> Suporte
+        </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+        <div class="sidebar-card">
+            <strong>Precisa de ajuda?</strong>
+            <p>Conheça nossa página de suporte e encontre ajuda para sua hospedagem.</p>
+            <a href="suporte.html">Acessar suporte →</a>
+        </div>
+    </div>
+
 </aside>
+
+<!-- CONTEÚDO PRINCIPAL -->
+
 <main class="main">
-  <header class="topbar"><div style="display:flex;align-items:center;gap:10px"><button class="mobile-menu" onclick="toggleMenu()" aria-label="Abrir menu">☰</button><div class="status-pill"><span class="green-dot"></span> Infraestrutura demonstrativa</div></div><div class="top-actions"><a class="btn" href="#conta">Entrar</a><a class="btn primary" href="#conta">Cadastrar ↗</a></div></header>
-  <section class="hero" id="inicio"><div class="hero-copy"><div class="eyebrow">⚡ <b>HOSPEDAGEM DE SERVIDORES</b></div><h1>BLOCKERA<br><span>HOST //</span></h1><h2>Seu servidor, <span>do seu jeito.</span></h2><p>Uma central simples para conhecer planos, organizar seus servidores e acompanhar tudo em um só lugar.</p><div class="hero-buttons"><a class="btn primary" href="#planos">Explorar planos ↗</a><a class="btn" href="#sobre">Conhecer a Blockera</a></div></div><div class="hero-art"><div class="orb"><div class="cube">B</div></div></div></section>
-  <div class="stats"><div class="stat"><div class="stat-icon">ϟ</div><div><strong>Estável</strong><small>Estrutura planejada</small></div></div><div class="stat"><div class="stat-icon">▤</div><div><strong>Multi-game</strong><small>Expansão de catálogo</small></div></div><div class="stat"><div class="stat-icon">◈</div><div><strong>Proteção</strong><small>Segurança em foco</small></div></div><div class="stat"><div class="stat-icon">♧</div><div><strong>Suporte</strong><small>Central de atendimento</small></div></div></div>
-  <section class="section" id="servidores"><div class="section-head"><div><div class="section-kicker">✦ RECURSOS</div><h2>Uma central, tudo organizado</h2><p>Ferramentas pensadas para administrar sua hospedagem.</p></div></div><div class="cards"><article class="feature-card"><div class="card-icon">⛏</div><h3>Minecraft Java & Bedrock</h3><p>Espaço para explorar opções de servidores Minecraft.</p></article><article class="feature-card"><div class="card-icon">ϟ</div><h3>Desempenho</h3><p>Informações claras sobre recursos e configurações do servidor.</p></article><article class="feature-card"><div class="card-icon">◈</div><h3>Proteção</h3><p>Uma experiência focada em segurança e confiabilidade.</p></article><article class="feature-card"><div class="card-icon">☏</div><h3>Central de suporte</h3><p>Orientações e suporte para ajudar em cada etapa.</p></article></div></section>
-  <section class="section" id="planos"><div class="section-head"><div><div class="section-kicker">✦ PLANOS</div><h2>Escolha como começar</h2><p>Cards ilustrativos — preços e recursos ainda não são ofertas reais.</p></div></div><div class="plans"><article class="plan-card"><h3>Starter</h3><p>Para começar a explorar.</p><div class="price">Grátis <small>/ protótipo</small></div><ul><li>Painel demonstrativo</li><li>Interface responsiva</li><li>Recursos de exemplo</li></ul><button class="btn" onclick="toast('Plano Starter demonstrativo — sem provisionamento real.')">Selecionar plano</button></article><article class="plan-card featured"><span class="featured-tag">EM DESTAQUE</span><h3>Pro</h3><p>Para quem quer mais opções.</p><div class="price">Em breve <small>/ lançamento</small></div><ul><li>Configurações ampliadas</li><li>Mais opções de servidor</li><li>Painel de controle</li></ul><button class="btn primary" onclick="toast('Os planos reais serão publicados após configurar a infraestrutura.')">Tenho interesse</button></article><article class="plan-card"><h3>Custom</h3><p>Uma solução personalizada.</p><div class="price">Sob consulta</div><ul><li>Configuração personalizada</li><li>Informações de recursos</li><li>Atendimento direcionado</li></ul><a class="btn" href="#suporte">Consultar</a></article></div></section>
-  <section class="section about-grid" id="sobre"><article class="info-card"><div class="section-kicker">✦ SOBRE A BLOCKERA</div><h3>Uma nova experiência de hospedagem</h3><p>A BLOCKERA HOST está sendo construída para reunir informações, planos e gerenciamento de servidores em uma interface clara e moderna. Este protótipo representa a parte visual do projeto e não provisiona máquinas reais ainda.</p></article><article class="info-card" id="suporte"><div class="section-kicker">✦ SUPORTE</div><h3>Precisa de ajuda?</h3><p>Área preparada para adicionar Discord, sistema de tickets, FAQ e contato oficial. Atualize os links quando os canais estiverem criados.</p><a class="btn" href="#conta" style="margin-top:13px">Acessar área de conta ↗</a></article></section>
-  <section class="section" id="painel"><div class="section-head"><div><div class="section-kicker">✦ ÁREA DO CLIENTE</div><h2>Seu painel, em breve</h2><p>O painel real será ativado após integrar login e infraestrutura de servidores.</p></div><a class="btn" href="#conta">Login / cadastro ↗</a></div></section>
-  <section class="section" id="conta"><article class="info-card"><div class="section-kicker">✦ CONTA</div><h3>Login e cadastro</h3><p>Os botões de conta são apenas navegação visual neste protótipo. Conecte ao Supabase Auth para autenticação real e armazenamento seguro.</p><button class="btn primary" onclick="toast('Área de autenticação ainda não conectada.')" style="margin-top:14px">Abrir acesso demonstrativo</button></article></section>
-  <footer class="footer"><span>© 2026 BLOCKERA HOST · Protótipo de interface</span><span>Feito para uma experiência de hospedagem mais simples.</span></footer>
-</main><div class="toast" id="toast"></div>
+
+    <header class="topbar">
+        <button class="mobile-menu" id="menuButton" aria-label="Abrir menu">☰</button>
+
+        <div class="breadcrumb">
+            Página inicial / <span>Início</span>
+        </div>
+
+        <div class="top-actions">
+            <a href="login.html" class="btn btn-outline">Entrar</a>
+            <a href="cadastro.html" class="btn btn-primary">Criar conta</a>
+        </div>
+    </header>
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="hero">
+        <div class="hero-content reveal">
+
+            <div class="tag">
+                <span class="tag-dot"></span>
+                BLOCKERA HOST · HOSPEDAGEM
+            </div>
+
+            <h1>
+                Seu servidor.<br>
+                Seu <span>universo.</span>
+            </h1>
+
+            <p class="hero-description">
+                Crie seu próprio mundo, reúna seus amigos e leve
+                sua experiência Minecraft para outro nível com a
+                BLOCKERA HOST.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="servidores.html" class="btn btn-primary">
+                    Explorar servidores →
+                </a>
+
+                <a href="planos.html" class="btn btn-outline">
+                    Conhecer planos
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-decoration">
+            <div class="hero-symbol">B</div>
+        </div>
+    </section>
+
+    <!-- JAVA E BEDROCK -->
+
+    <section class="section">
+        <div class="section-heading">
+            <small>NOSSAS PLATAFORMAS</small>
+            <h2>Escolha sua experiência</h2>
+            <p>Encontre a modalidade ideal para começar seu servidor.</p>
+        </div>
+
+        <div class="server-grid">
+
+            <article class="server-card">
+                <div class="server-icon">☕</div>
+                <h3>Minecraft Java</h3>
+                <p>
+                    Uma experiência completa para jogadores de PC,
+                    com suporte a diferentes possibilidades de
+                    personalização e configurações.
+                </p>
+                <a href="servidores.html" class="card-link">
+                    Explorar Java →
+                </a>
+            </article>
+
+            <article class="server-card">
+                <div class="server-icon">🌍</div>
+                <h3>Minecraft Bedrock</h3>
+                <p>
+                    Prepare sua experiência para jogar com amigos
+                    em diferentes dispositivos compatíveis com
+                    Minecraft Bedrock.
+                </p>
+                <a href="servidores.html" class="card-link">
+                    Explorar Bedrock →
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- RECURSOS -->
+
+    <section class="section">
+        <div class="section-heading">
+            <small>POR QUE BLOCKERA?</small>
+            <h2>Uma experiência completa</h2>
+            <p>
+                Recursos pensados para facilitar o gerenciamento
+                e a experiência de hospedagem.
+            </p>
+        </div>
+
+        <div class="features">
+
+            <article class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Desempenho</h3>
+                <p>
+                    Uma estrutura planejada para oferecer
+                    uma experiência de hospedagem eficiente.
+                </p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon">🛡️</div>
+                <h3>Segurança</h3>
+                <p>
+                    Gerenciamento de conta e recursos
+                    pensados para proteger seu acesso.
+                </p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon">⚙️</div>
+                <h3>Gerenciamento</h3>
+                <p>
+                    Organize seus servidores e configurações
+                    através da área do usuário.
+                </p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon">🎮</div>
+                <h3>Minecraft</h3>
+                <p>
+                    Uma plataforma dedicada a quem deseja
+                    criar suas próprias experiências.
+                </p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Painel de controle</h3>
+                <p>
+                    Acesse sua área de gerenciamento
+                    e acompanhe seus servidores.
+                </p>
+            </article>
+
+            <article class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Atendimento</h3>
+                <p>
+                    Consulte nossa página de suporte
+                    para obter ajuda quando precisar.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+
+    <section class="section">
+        <div class="section-heading">
+            <small>COMECE AGORA</small>
+            <h2>Como funciona?</h2>
+            <p>Três etapas para começar sua jornada.</p>
+        </div>
+
+        <div class="steps">
+
+            <article class="step">
+                <div class="step-number">ETAPA 01</div>
+                <h3>Crie sua conta</h3>
+                <p>
+                    Faça seu cadastro para acessar
+                    sua área de usuário.
+                </p>
+            </article>
+
+            <article class="step">
+                <div class="step-number">ETAPA 02</div>
+                <h3>Escolha seu plano</h3>
+                <p>
+                    Consulte as opções disponíveis
+                    e escolha a ideal para seu projeto.
+                </p>
+            </article>
+
+            <article class="step">
+                <div class="step-number">ETAPA 03</div>
+                <h3>Gerencie seu servidor</h3>
+                <p>
+                    Acesse seu painel e acompanhe
+                    as configurações da hospedagem.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- CHAMADA FINAL -->
+
+    <section class="cta">
+        <div>
+            <h2>Seu próximo mundo começa aqui.</h2>
+            <p>
+                Conheça a BLOCKERA HOST e descubra
+                as possibilidades para seu servidor.
+            </p>
+        </div>
+
+        <a href="cadastro.html" class="btn btn-primary">
+            Começar agora →
+        </a>
+    </section>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+        <div class="logo">
+            <div class="logo-icon">B</div>
+            <div class="logo-name">BLOCKERA <span>HOST</span></div>
+        </div>
+
+        <p>© 2026 BLOCKERA HOST. Todos os direitos reservados.</p>
+
+        <p>Feito para quem cria mundos.</p>
+    </footer>
+
+</main>
+
 <script>
-function toggleMenu(){document.getElementById('sidebar').classList.toggle('open')}
-document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');document.getElementById('sidebar').classList.remove('open')}));
-let toastTimer;function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),3200)}
+const sidebar = document.getElementById("sidebar");
+const menuButton = document.getElementById("menuButton");
+
+menuButton.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+});
+
+document.addEventListener("click", (event) => {
+    if (
+        window.innerWidth <= 760 &&
+        !sidebar.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+        sidebar.classList.remove("open");
+    }
+});
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) {
+        sidebar.classList.remove("open");
+    }
+});
 </script>
-</body></html>
+
+</body>
+</html>
